@@ -1,0 +1,10 @@
+<nav>
+  <a [routerLink]="['home']" routerLinkActive="active" md-button>
+    Home
+  </a>
+  <a [routerLink]="['dashboard']" routerLinkActive="active" md-button>Dashboard</a>
+  <a routerLink="/about" routerLinkActive="active" md-button>About</a>
+</nav>
+<main>
+  <router-outlet></router-outlet>
+</main>
