@@ -5,25 +5,27 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
 
-import { MdIconModule, MdButtonModule } from '@angular/material';
+import { MdButtonModule, MdIconModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AppRoutingModule } from './app-routing.module';
+import { PopupComponent } from './popup/popup.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
-    MdIconModule, MdButtonModule,
+    MdButtonModule, MdIconModule,
     AppRoutingModule
   ],
   providers: [],

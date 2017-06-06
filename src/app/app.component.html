@@ -1,10 +1,19 @@
 <nav>
-  <a [routerLink]="['home']" routerLinkActive="active" md-button>
+  <a [routerLink]="[{outlets:{primary:'home',popup:null}}]" routerLinkActive="active" md-button>
     Home
   </a>
   <a [routerLink]="['dashboard']" routerLinkActive="active" md-button>Dashboard</a>
-  <a routerLink="/about" routerLinkActive="active" md-button>About</a>
+  <a [routerLink]="['about',4444]" routerLinkActive="active" md-button>About</a>
 </nav>
 <main>
   <router-outlet></router-outlet>
 </main>
+<div>
+  ++++++++++popup++++++++++
+  <div>
+    <a [routerLink]="[{outlets:{popup:'popup'}}]" routerLinkActive="active">popup</a>
+    <a [routerLink]="[{outlets:{popup:null}}]">close popup</a>
+    <router-outlet name="popup"></router-outlet>
+  </div>
+  ----------popup----------
+</div>
