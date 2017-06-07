@@ -11,7 +11,6 @@ export class AuthGuardService implements CanActivate, CanActivateChild {
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     let url = state.url;
-    console.log(route, state);
 
     let r = route.root;
     let ps = [];
