@@ -1,0 +1,5 @@
+<div>{{name}}</div>
+<div>
+  <button md-button md-raised-button color="primary" [disabled]="voted" (click)="$vote(true)">Agree</button>
+  <button md-button md-raised-button color="warn" [disabled]="voted" (click)="$vote(false)">Disagree</button>
+</div>

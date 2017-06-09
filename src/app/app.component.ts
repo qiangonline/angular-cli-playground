@@ -5,6 +5,8 @@ import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/mergeMap';
 
+import { AuthService } from './core/auth.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,7 +18,8 @@ export class AppComponent implements OnInit {
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    private titleService: Title
+    private titleService: Title,
+    private authSerivce: AuthService
   ) {
 
   }
@@ -35,8 +38,9 @@ export class AppComponent implements OnInit {
       .subscribe(data => {
         this.titleService.setTitle(data.title)
       });
+  }
 
-
-
+  isLoggedIn() {
+    return this.authSerivce.isLoggedIn;
   }
 }

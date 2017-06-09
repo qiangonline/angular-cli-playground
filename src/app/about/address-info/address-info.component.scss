@@ -1,0 +1,8 @@
+:host-context(.dark-theme) {
+  display: block;
+  background: grey;
+  &:hover {
+    background: cyan;
+    text-transform: uppercase;
+  }
+}

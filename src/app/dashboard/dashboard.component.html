@@ -1,5 +1,5 @@
 <p>
-  dashboard works!
+  <span appHighlight="green">dashboard works!</span>
 </p>
 <md-icon>explore</md-icon>
 <md-input-container class="is-fullwidth">
@@ -7,6 +7,12 @@
   <md-hint align="end">{{postalCode.value.length}} / 5</md-hint>
 </md-input-container>
 
-<button md-button md-raised-button color="primary">
+<button md-button md-raised-button color="primary" *ngIf="2<1">
   Cancel
 </button>
+<nav>
+  <a [routerLink]="['version']">Version</a>
+  <a [routerLink]="['voter']">Voter</a>
+  <a [routerLink]="['countdown']">Countdown</a>
+</nav>
+<router-outlet></router-outlet>

@@ -4,7 +4,9 @@
   </a>
   <a [routerLink]="['dashboard']" routerLinkActive="active" md-button>Dashboard</a>
   <a [routerLink]="['about',4444]" routerLinkActive="active" md-button>About</a>
+  <a [routerLink]="['login']" routerLinkActive="active" md-button disableRipple *ngIf="!isLoggedIn()">Log in</a>
 </nav>
+
 <main>
   <router-outlet></router-outlet>
 </main>

@@ -11,13 +11,13 @@ const routes: Routes = [
   {
     path: ':id',
     component: AboutComponent,
-    //canActivate: [AuthGuardService],
+    // canActivate: [AuthGuardService],
     canActivateChild: [AuthGuardService],
     children: [
       { path: 'address-info', component: AddressInfoComponent, data: { title: 'Address Info' } },
       { path: 'business-info', loadChildren: './business-info/business-info.module#BusinessInfoModule', data: { title: 'Business Info' } },
       { path: 'contact-info', loadChildren: './contact-info/contact-info.module#ContactInfoModule', data: { title: 'Contact Info' } },
-      { path: '', redirectTo: 'business-info', pathMatch: 'full' }
+      { path: '', redirectTo: 'address-info', pathMatch: 'full' }
     ],
     data: { title: 'About' }
   },
