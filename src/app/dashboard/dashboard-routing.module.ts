@@ -14,6 +14,7 @@ const routes: Routes = [
           { path: 'version', loadChildren: './version/version.module#VersionModule' },
           { path: 'voter', loadChildren: './voter/voter.module#VoterModule' },
           { path: 'countdown', loadChildren: './countdown/countdown.module#CountdownModule' },
+          { path: 'mission', loadChildren: './mission/mission.module#MissionModule' },
         ]
       }
     ]

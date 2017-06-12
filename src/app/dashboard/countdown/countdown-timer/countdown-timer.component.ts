@@ -8,7 +8,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 export class CountdownTimerComponent implements OnInit, OnDestroy {
   intervalId = 0;
   message = '';
-  seconds = 11;
+  seconds = 10;
 
   constructor() { }
 
@@ -31,6 +31,7 @@ export class CountdownTimerComponent implements OnInit, OnDestroy {
   }
 
   countDown() {
+    this.clearTimer();
     this.intervalId = window.setInterval(() => {
       this.seconds -= 1;
       if (this.seconds === 0) {

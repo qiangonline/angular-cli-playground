@@ -25,9 +25,9 @@ export class VersionDetailComponent implements OnInit, OnChanges {
       let changedProperty = changes[p];
       let to = changedProperty.currentValue;
       if (changedProperty.firstChange) {
-        log.push(`Initial value of '${p}' set ${to}`);
+        log.push(`Initial value of "${p}" set ${to}`);
       } else {
-        log.push(`'${p}' changed from ${changedProperty.previousValue} to ${to}`)
+        log.push(`"${p}" changed from ${changedProperty.previousValue} to ${to}`)
       }
     }
     this.changeLog.push(log.join(','));
