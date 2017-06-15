@@ -1,0 +1,11 @@
+<p>
+  Name: <strong>{{vip.name}}</strong>, Email: <strong>{{vip.email}}</strong>
+</p>
+<p>Counter:({{counter}})</p>
+<button md-button md-raised-button color="primary" (click)="changeVip()">Change vip</button>
+<button md-button md-raised-button color="primary" (click)="changeVipEmail()">Change vip email</button>
+<button md-button md-raised-button color="warn" (click)="increment()">increment</button>
+<div>
+  <app-vip-card [vip]="vip" [data$]="data$">
+  </app-vip-card>
+</div>

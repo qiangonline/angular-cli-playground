@@ -1,5 +1,5 @@
 <p>
-  <span appHighlight="green">dashboard works!</span>
+  <span appHighlight="green">dashboard works! {{foo}}</span>
 </p>
 <md-icon>explore</md-icon>
 <md-input-container class="is-fullwidth">
@@ -15,5 +15,6 @@
   <a [routerLink]="['voter']">Voter</a>
   <a [routerLink]="['countdown']">Countdown</a>
   <a [routerLink]="['mission']">Mission</a>
+  <a [routerLink]="['change-detection']">Change detection</a>
 </nav>
 <router-outlet></router-outlet>

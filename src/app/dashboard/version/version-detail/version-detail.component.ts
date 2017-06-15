@@ -18,6 +18,10 @@ export class VersionDetailComponent implements OnInit, OnChanges {
   ngOnInit() {
   }
 
+  newMinor() {
+    this.minor++;
+  }
+
   ngOnChanges(changes: { [p: string]: SimpleChange }) {
     console.log(changes);
     let log: string[] = [];

@@ -1,0 +1,9 @@
+<p>
+  Name: <strong>{{vip.name}}</strong>, Email: <strong>{{vip.email}}</strong>
+  <button md-button md-raised-button color="warn" (click)="detect()">Detect</button>
+  <button md-button md-raised-button color="warn" (click)="resetCounter()">Reset Counter</button>
+</p>
+<p>Counter:({{counter}})</p>
+<div>
+  <app-vip-detail [vip]="vip"></app-vip-detail>
+</div>

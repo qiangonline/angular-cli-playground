@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
+  foo = 0;
   constructor() { }
 
   ngOnInit() {
+    setInterval(() => {
+      this.foo++;
+    }, 1000);
   }
 
 }
