@@ -14,9 +14,11 @@ export class VipDetailComponent implements OnInit {
 
   ngOnInit() {
   }
-
   changeVip() {
-    this.vip.name = 'ssssssssssssssss';
+    this.vip = { name: 'Lao K', email: 'k@a.com' };
+  }
+  changeVipName() {
+    this.vip.name = 'name...';
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, SimpleChange, Input } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges, Input } from '@angular/core';
 
 @Component({
   selector: 'app-version-detail',
@@ -16,13 +16,14 @@ export class VersionDetailComponent implements OnInit, OnChanges {
   constructor() { }
 
   ngOnInit() {
+
   }
 
   newMinor() {
     this.minor++;
   }
 
-  ngOnChanges(changes: { [p: string]: SimpleChange }) {
+  ngOnChanges(changes: SimpleChanges) {
     console.log(changes);
     let log: string[] = [];
     for (let p in changes) {

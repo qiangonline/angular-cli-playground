@@ -11,9 +11,7 @@ export class DashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    setInterval(() => {
-      this.foo++;
-    }, 1000);
+
   }
 
 }

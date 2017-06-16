@@ -4,8 +4,9 @@
 <p>Counter:({{counter}})</p>
 <button md-button md-raised-button color="primary" (click)="changeVip()">Change vip</button>
 <button md-button md-raised-button color="primary" (click)="changeVipEmail()">Change vip email</button>
-<button md-button md-raised-button color="warn" (click)="increment()">increment</button>
+<button md-button md-raised-button color="warn" (click)="increment()">Increment</button>
+<button md-button md-raised-button color="accent" (click)="toggleCd()">Toggle cd</button>
 <div>
-  <app-vip-card [vip]="vip" [data$]="data$">
+  <app-vip-card [vip]="vip" [data]="data$" [notifier]="notifier$">
   </app-vip-card>
 </div>
