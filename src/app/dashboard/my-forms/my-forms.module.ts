@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule, FormsModule } from '@angular/forms'
+
+import { SharedModule } from '../../shared/shared.module';
 
 import { MyFormsRoutingModule } from './my-forms-routing.module';
 import { MyFormsComponent } from './my-forms.component';
@@ -9,6 +11,8 @@ import { MyFormsComponent } from './my-forms.component';
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    FormsModule,
+    SharedModule,
     MyFormsRoutingModule
   ],
   declarations: [MyFormsComponent]
