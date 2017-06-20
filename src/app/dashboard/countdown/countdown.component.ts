@@ -19,7 +19,8 @@ export class CountdownComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    setTimeout(() => this.seconds = () => this.countdownTimerComponent.seconds, 0);
+    //setTimeout(() => this.seconds = () => this.countdownTimerComponent.seconds, 0);
+    this.seconds = () => this.countdownTimerComponent.seconds;
   }
 
   start() {

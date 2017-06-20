@@ -16,6 +16,8 @@ const routes: Routes = [
           { path: 'countdown', loadChildren: './countdown/countdown.module#CountdownModule' },
           { path: 'mission', loadChildren: './mission/mission.module#MissionModule' },
           { path: 'change-detection', loadChildren: './change-detection/change-detection.module#ChangeDetectionModule' },
+          { path: 'content-and-view', loadChildren: './content-and-view/content-and-view.module#ContentAndViewModule' },
+          { path: 'my-forms', loadChildren: './my-forms/my-forms.module#MyFormsModule' },
         ]
       }
     ]

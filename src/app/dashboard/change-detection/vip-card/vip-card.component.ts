@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs/Observable';
-import { Component, OnInit, OnChanges, DoCheck, SimpleChanges, Input, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, SimpleChanges, Input, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-vip-card',
@@ -7,7 +7,7 @@ import { Component, OnInit, OnChanges, DoCheck, SimpleChanges, Input, ChangeDete
   styleUrls: ['./vip-card.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class VipCardComponent implements OnInit, OnChanges, DoCheck {
+export class VipCardComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked {
 
   @Input()
   vip;
@@ -24,7 +24,6 @@ export class VipCardComponent implements OnInit, OnChanges, DoCheck {
 
   ngOnInit() {
     this.data.subscribe((value) => {
-      console.log(`counter:${value}`);
       this.counter = value;
       //this.cd.detectChanges();
       this.cd.markForCheck();
@@ -39,10 +38,11 @@ export class VipCardComponent implements OnInit, OnChanges, DoCheck {
       }
     });
 
+
+
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    debugger;
     for (let p in changes) {
       let changedProperty = changes[p];
       let to = changedProperty.currentValue;
@@ -56,8 +56,23 @@ export class VipCardComponent implements OnInit, OnChanges, DoCheck {
   }
 
   ngDoCheck() {
-    console.log(this.vip);
+    console.log(`check:${this.vip}`);
+  }
 
+  ngAfterContentInit() {
+    console.log(`content init.`);
+  }
+
+  ngAfterContentChecked() {
+    console.log(`content checked.`);
+  }
+
+  ngAfterViewInit() {
+    console.log(`view init.`);
+  }
+
+  ngAfterViewChecked() {
+    console.log(`view checked.`);
   }
 
   resetCounter() {
@@ -65,6 +80,7 @@ export class VipCardComponent implements OnInit, OnChanges, DoCheck {
   }
 
   detect() {
+    //this.cd.markForCheck();
     this.cd.detectChanges();
   }
 

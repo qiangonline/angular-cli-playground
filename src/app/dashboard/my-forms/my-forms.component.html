@@ -1,0 +1,36 @@
+<p>
+  my-forms works!
+</p>
+<form [formGroup]="userForm" (ngSubmit)="submit()" novalidate>
+  <div>
+    <label>Name:
+      <input type="text" formControlName="name">
+      <div ></div>
+    </label>
+  </div>
+  <div>
+    <button type="submit" [disabled]="userForm.pristine">Submit</button>
+  </div>
+  <div formArrayName="secretLairs">
+    <div *ngFor="let secretLair of secretLairs.controls;let i=index" [formGroupName]="i">
+      <label>Street:
+        <input type="text" formControlName="street">
+      </label>
+      <label>City:
+        <input type="text" formControlName="city">
+      </label>
+      <label>State:
+        <input type="text" formControlName="state">
+      </label>
+      <button type="button" *ngIf="secretLairs.controls.length>1" (click)="removeAdress(i)">Remove the address</button>
+
+    </div>
+    <button type="button" (click)="addAdress()">Add a address</button>
+  </div>
+  <p>
+    {{userForm.get('name').value | json}}
+  </p>
+  <p>
+    {{userForm.value | json}}
+  </p>
+</form>

@@ -1,14 +1,15 @@
 import { BehaviorSubject } from 'rxjs/BehaviorSubject'
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-change-detection',
   templateUrl: './change-detection.component.html',
-  styleUrls: ['./change-detection.component.scss']
+  styleUrls: ['./change-detection.component.scss'],
+  //changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ChangeDetectionComponent implements OnInit {
 
-  vip = { name: 'Tom', email: 'a@b.com' };
+  vip: { [p: string]: string } = { name: 'Tom', email: 'a@b.com', foo: '' };
 
   data$ = new BehaviorSubject(0);
   notifier$ = new BehaviorSubject(true);
@@ -16,7 +17,7 @@ export class ChangeDetectionComponent implements OnInit {
   counter = 0;
 
 
-  constructor(private cd: ChangeDetectorRef) { }
+  constructor() { }
 
   ngOnInit() {
   }

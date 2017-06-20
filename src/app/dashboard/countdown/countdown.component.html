@@ -1,5 +1,7 @@
 <h4>Countdown</h4>
-<button md-button md-raised-button color="primary" (click)="start()">Start</button>
-<button md-button md-raised-button color="warn" (click)="stop()">stop</button>
+<div fxLayout="row" fxLayoutGap="8px">
+  <button md-button md-raised-button color="primary" (click)="start()">Start</button>
+  <button md-button md-raised-button color="warn" (click)="stop()">stop</button>
+</div>
 <div>{{seconds()}}</div>
 <app-countdown-timer></app-countdown-timer>

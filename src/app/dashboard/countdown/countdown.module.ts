@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { SharedModule } from '../../shared/shared.module';
 
@@ -10,6 +11,7 @@ import { CountdownTimerComponent } from './countdown-timer/countdown-timer.compo
 @NgModule({
   imports: [
     CommonModule,
+    FlexLayoutModule,
     SharedModule,
     CountdownRoutingModule
   ],
