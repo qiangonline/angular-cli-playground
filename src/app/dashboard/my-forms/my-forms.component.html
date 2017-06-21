@@ -46,17 +46,18 @@
   <div>
     <label>
       Tel:
-      <input type="text" name="tel" [(ngModel)]="contact.tel" #name="ngModel" required minlength="3" maxlength="12">
-      <span *ngIf="name.errors?.required">required</span>
-      <span *ngIf="name.errors?.minlength">at least 3</span>
+      <input type="text" name="tel" [(ngModel)]="contact.tel" required minlength="3" maxlength="12">
+      <span *ngIf="contactFormErrors.tel">{{contactFormErrors.tel}}</span>
     </label>
   </div>
-  <div>name errors:{{name.errors | json}}</div>
+
+
   <div>
     <label>
       Add:
-      <input type="add" name="add" [(ngModel)]="contact.add" #add="ngModel">
+      <input type="add" name="add" [(ngModel)]="contact.add" required>
+      <span *ngIf="contactFormErrors.add">{{contactFormErrors.tel}}</span>
     </label>
   </div>
-  <p>{{contact | json}}</p>
+
 </form>
