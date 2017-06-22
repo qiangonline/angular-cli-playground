@@ -60,14 +60,12 @@ export class MyFormsComponent implements OnInit, AfterViewChecked {
   }
 
   ngAfterViewChecked() {
-    debugger;
     if (this.theContactForm === this.contactForm) { return; }
     this.theContactForm = this.contactForm;
     this.theContactForm.valueChanges.subscribe(data => this.contactFormChanged(data))
   }
 
   contactFormChanged(data) {
-    debugger
     const form = this.theContactForm.form;
     for (let key in this.contactFormErrors) {
       this.contactFormErrors[key] = '';
